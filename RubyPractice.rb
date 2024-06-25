@@ -62,8 +62,32 @@ end
 # 4 kata
 # In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
 
-def filter_list(l)
-    l.select { |number| number.is_a?(Integer)}
+def filter_list(list)
+    list.select { |number| number.is_a?(Integer)}
 end
 
-puts filter_list([1,2,'a','b'])
+# puts filter_list([1,2,'a','b'])
+
+# 5
+
+=begin
+Write function bmi that calculates body mass index (bmi = weight / height2).
+
+if bmi <= 18.5 return "Underweight"
+
+if bmi <= 25.0 return "Normal"
+
+if bmi <= 30.0 return "Overweight"
+
+if bmi > 30 return "Obese"
+=end
+
+def bmi(weight, height)
+    return "Underweight" if weight/height**2 <= 18.5
+    return "Normal" if weight/height**2 <= 25.0
+    return "Overweight" if weight/height**2 <= 30.0
+    "Obese"
+end
+
+puts bmi(50, 1.80)
+puts bmi(80, 1.80)
