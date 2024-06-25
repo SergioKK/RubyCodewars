@@ -1,3 +1,4 @@
+# 1 kata
 def paperwork(n, m)
     [m, n].any? { |elem| elem < 0 } ? 0 : m * n
 end
@@ -6,7 +7,7 @@ end
 # puts paperwork(5,-5)
 # puts paperwork(5,5)
 
-
+# 2 kata
 =begin 
 
 After a hard quarter in the office you decide to get some rest on a vacation. 
@@ -38,6 +39,8 @@ end
 # puts rental_car_cost(8)
 # puts rental_car_cost(98)
 
+
+# 3 kata
 =begin
 
 You are given an odd-length array of integers, in which all of them are the same, except for one single number.
@@ -52,5 +55,15 @@ def stray (numbers)
     numbers.each { |number| if numbers.count(number) == 1 then return number end }
 end
 
-puts stray([1, 1, 2])
-puts stray([17, 17, 3, 17, 17, 17, 17])
+# puts stray([1, 1, 2])
+# puts stray([17, 17, 3, 17, 17, 17, 17])
+
+
+# 4 kata
+# In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+
+def filter_list(l)
+    l.select { |number| number.is_a?(Integer)}
+end
+
+puts filter_list([1,2,'a','b'])
