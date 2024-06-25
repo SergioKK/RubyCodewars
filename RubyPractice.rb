@@ -27,13 +27,30 @@ def rental_car_cost(d)
     elsif d >= 3
         amount -= 20
     end
-    
+
     amount
 end
 
-puts rental_car_cost(1)
-puts rental_car_cost(2)
-puts rental_car_cost(3)
-puts rental_car_cost(7)
-puts rental_car_cost(8)
-puts rental_car_cost(98)
+# puts rental_car_cost(1)
+# puts rental_car_cost(2)
+# puts rental_car_cost(3)
+# puts rental_car_cost(7)
+# puts rental_car_cost(8)
+# puts rental_car_cost(98)
+
+=begin
+
+You are given an odd-length array of integers, in which all of them are the same, except for one single number.
+
+Complete the method which accepts such an array, and returns that single different number.
+
+The input array will always be valid! (odd-length >= 3)
+
+=end
+
+def stray (numbers)
+    numbers.each { |number| if numbers.count(number) == 1 then return number end }
+end
+
+puts stray([1, 1, 2])
+puts stray([17, 17, 3, 17, 17, 17, 17])
