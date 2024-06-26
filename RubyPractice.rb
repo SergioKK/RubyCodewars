@@ -186,3 +186,34 @@ end
 # puts sum_digits(99)
 # puts sum_digits(-32)
 # puts sum_digits(-3)
+
+# 10 kata
+# Numbers ending with zeros are boring. They might be fun in your world, but not here. Get rid of them. Only the ending ones.
+
+# my solution
+def no_boring_zeros(num)
+    if num == 0
+        return num
+    end
+    while num % 10 == 0
+        num /= 10
+    end
+    num
+end
+
+# less lines
+def no_boring_zeros(num)
+    return num if num.zero?
+    num /= 10 until num % 10 != 0
+    num
+end
+
+# through regexp
+def no_boring_zeros(num)
+    num.to_s.gsub(/[0]+$/,"").to_i
+end
+
+puts no_boring_zeros(1450)
+puts no_boring_zeros(145000)
+puts no_boring_zeros(-145000)
+puts no_boring_zeros(0)
