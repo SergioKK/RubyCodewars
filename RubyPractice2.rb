@@ -12,5 +12,22 @@ def find_difference(a, b)
     (a.inject(:*) - b.reduce(:*)).abs
 end
 
-puts find_difference([3, 2, 5], [1, 4, 4])
-puts find_difference([9, 7, 2], [5, 2, 2])
+# puts find_difference([3, 2, 5], [1, 4, 4])
+# puts find_difference([9, 7, 2], [5, 2, 2])
+
+
+# 12 kata
+
+=begin
+Given a list of integers, determine whether the sum of its elements is odd or even.
+Give your answer as a string matching "odd" or "even".
+If the input array is empty consider it as: [0] (array with a zero).
+=end
+
+def odd_or_even(array)
+    array.sum % 2 == 0 ? "even" : "odd"
+end
+
+puts odd_or_even([0])
+puts odd_or_even([1])
+puts odd_or_even([-1023, 1, -2])
