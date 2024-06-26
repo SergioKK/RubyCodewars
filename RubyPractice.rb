@@ -99,5 +99,37 @@ def gimme(input_array)
     input_array.find_index(input_array.sort[1])
 end
 
-puts gimme([3, 25, 1])
-puts gimme([-0.410, -23, 4])
+# puts gimme([3, 25, 1])
+# puts gimme([-0.410, -23, 4])
+
+# 7 kata
+
+=begin
+Write a function that checks if a given string (case insensitive) is a palindrome.
+A palindrome is a word, number, phrase, or other sequence of symbols that reads the same backwards as forwards, such as madam or racecar.
+=end
+
+def is_palindrome str
+    str.downcase == str.downcase.reverse
+end
+
+# puts is_palindrome("Abba")
+# puts is_palindrome("hello")
+
+=begin
+The wide-mouth frog is particularly interested in the eating habits of other creatures.
+
+He just can't stop asking the creatures he encounters what they like to eat. But, then he meets the alligator who just LOVES to eat wide-mouthed frogs!
+
+When he meets the alligator, it then makes a tiny mouth.
+
+Your goal in this kata is to create complete the mouth_size method this method takes one argument animal which corresponds to the animal encountered by the frog. 
+If this one is an alligator (case-insensitive) return small otherwise return wide.
+=end
+
+def mouth_size(animal)
+    animal.downcase == "alligator" ? "small" : "wide"
+end
+
+puts mouth_size("toucan")
+puts mouth_size("alligator")
