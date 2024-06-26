@@ -131,5 +131,58 @@ def mouth_size(animal)
     animal.downcase == "alligator" ? "small" : "wide"
 end
 
-puts mouth_size("toucan")
-puts mouth_size("alligator")
+# puts mouth_size("toucan")
+# puts mouth_size("alligator")
+
+# 8 kata
+=begin
+Your task is to find the first element of an array that is not consecutive.
+
+By not consecutive we mean not exactly 1 larger than the previous element of the array.
+
+E.g. If we have an array [1,2,3,4,6,7,8] then 1 then 2 then 3 then 4 are all consecutive but 6 is not, so that's the first non-consecutive number.
+=end
+
+def first_non_consecutive(arr)
+    i = 1
+    while i < arr.length
+        return arr[i] if arr[i] - arr[i-1] != 1
+        i += 1
+    end
+    return nil
+end
+
+#best practice
+def first_non_consecutive(arr)
+    arr.each_index do |i|
+      return arr[i + 1] if arr[i].next != arr[i + 1]
+    end
+end
+
+# puts first_non_consecutive([1,2,3,4,6,7,8])
+# puts first_non_consecutive([1,2,3,4,5,6,7,8,11])
+# puts first_non_consecutive([1,2,3,4,5,6,7,8])
+# puts first_non_consecutive([-5,-4,-3,-1])
+
+# 9 kata
+# Write a function named sumDigits which takes a number as input and returns the sum of the absolute value of each of the number's decimal digits.
+
+# first variant
+def sum_digits(number)
+    number.abs.to_s.split("").inject { |sum, number| sum.to_i + number.to_i }.to_i
+end
+
+# second variant
+def sum_digits(number)
+    number.abs.to_s.chars.map { |digit| digit.to_i }.sum
+end
+
+# best practice
+def sum_digits(number)
+    number.abs.digits.sum
+end
+
+# puts sum_digits(10)
+# puts sum_digits(99)
+# puts sum_digits(-32)
+# puts sum_digits(-3)
