@@ -68,7 +68,7 @@ end
 
 # puts filter_list([1,2,'a','b'])
 
-# 5
+# 5 kata
 
 =begin
 Write function bmi that calculates body mass index (bmi = weight / height2).
@@ -89,5 +89,15 @@ def bmi(weight, height)
     "Obese"
 end
 
-puts bmi(50, 1.80)
-puts bmi(80, 1.80)
+# puts bmi(50, 1.80)
+# puts bmi(80, 1.80)
+
+# 6 kata
+# As a part of this Kata, you need to create a function that when provided with a triplet, returns the index of the numerical element that lies between the other two elements.
+
+def gimme(input_array)
+    input_array.find_index(input_array.sort[1])
+end
+
+puts gimme([3, 25, 1])
+puts gimme([-0.410, -23, 4])
