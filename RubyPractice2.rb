@@ -28,6 +28,27 @@ def odd_or_even(array)
     array.sum % 2 == 0 ? "even" : "odd"
 end
 
-puts odd_or_even([0])
-puts odd_or_even([1])
-puts odd_or_even([-1023, 1, -2])
+# puts odd_or_even([0])
+# puts odd_or_even([1])
+# puts odd_or_even([-1023, 1, -2])
+
+
+# 13 kata
+
+=begin
+Given a month as an integer from 1 to 12, return to which quarter of the year it belongs as an integer number.
+For example: month 2 (February), is part of the first quarter; month 6 (June), 
+is part of the second quarter; and month 11 (November), is part of the fourth quarter.
+=end
+
+def quarter_of(month)
+    return 1 if (1..3).include?(month) 
+    return 2 if (4..6).include?(month) 
+    return 3 if (7..9).include?(month) 
+    return 4 if (10..12).include?(month) 
+end
+
+puts quarter_of(1)
+puts quarter_of(4)
+puts quarter_of(5)
+puts quarter_of(7)
