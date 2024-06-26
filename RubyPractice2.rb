@@ -48,7 +48,38 @@ def quarter_of(month)
     return 4 if (10..12).include?(month) 
 end
 
-puts quarter_of(1)
-puts quarter_of(4)
-puts quarter_of(5)
-puts quarter_of(7)
+# best practice
+def quarter_of(month)
+    (month/3.0).ceil
+end
+
+# puts quarter_of(1)
+# puts quarter_of(4)
+# puts quarter_of(5)
+# puts quarter_of(7)
+
+
+# 14 kata
+
+=begin
+Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.
+Write a function which takes a list of strings and returns each line prepended by the correct number.
+The numbering starts at 1. The format is n: string. Notice the colon and space in between.
+=end
+
+# my solution
+def number lines
+    arr = []
+    lines.each.with_index(1) do |line, index|
+       arr <<  "#{index}: #{line}"
+    end
+    arr
+end
+
+# best practice
+def number lines
+    lines.map.with_index(1) { |l, i| "#{i}: #{l}" }
+end
+
+puts number(["a", "b", "c"])
+puts number([nil, nil, nil, nil, nil])
