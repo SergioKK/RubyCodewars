@@ -94,5 +94,18 @@ def find_short(s)
     return s.split(" ").min_by(&:length).size
 end
 
-puts find_short("bitcoin two take over the world maybe who knows perhaps")
-puts find_short("turns out random test cases are easier than writing out basic ones")
+# puts find_short("bitcoin two take over the world maybe who knows perhaps")
+# puts find_short("turns out random test cases are easier than writing out basic ones")
+
+
+# 16 kata
+
+#Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+#The output should be two capital letters with a dot separating them.
+
+def abbrev_name(name)
+    name.split(" ").map { |word| word[0].upcase }.join(".")
+end
+
+puts abbrev_name("Sam Harris")
+puts abbrev_name("sam garris")
