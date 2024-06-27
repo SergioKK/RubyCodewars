@@ -107,5 +107,18 @@ def abbrev_name(name)
     name.split(" ").map { |word| word[0].upcase }.join(".")
 end
 
-puts abbrev_name("Sam Harris")
-puts abbrev_name("sam garris")
+# puts abbrev_name("Sam Harris")
+# puts abbrev_name("sam garris")
+
+
+# 17 kata
+# Calculator
+
+def arithmetic(a, b, operator)
+    operators = { "add" => "+", "subtract" => "-", "multiply" => "*", "divide" => "/"}
+    a.send operators[operator], b
+end
+
+puts arithmetic(1, 2, "add")
+puts arithmetic(8, 2, "subtract")
+puts arithmetic(8, 2, "divide")
