@@ -119,6 +119,15 @@ def arithmetic(a, b, operator)
     a.send operators[operator], b
 end
 
-puts arithmetic(1, 2, "add")
-puts arithmetic(8, 2, "subtract")
-puts arithmetic(8, 2, "divide")
+# puts arithmetic(1, 2, "add")
+# puts arithmetic(8, 2, "subtract")
+# puts arithmetic(8, 2, "divide")
+
+
+# 18 kata
+
+def accum(s)
+	s.split("").map.with_index { |char, index| "#{char*(index+1)}".capitalize }.join("-")
+end
+
+puts accum("ZpglnRxqenU")
