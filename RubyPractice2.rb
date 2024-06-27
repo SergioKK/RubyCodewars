@@ -81,5 +81,18 @@ def number lines
     lines.map.with_index(1) { |l, i| "#{i}: #{l}" }
 end
 
-puts number(["a", "b", "c"])
-puts number([nil, nil, nil, nil, nil])
+# puts number(["a", "b", "c"])
+# puts number([nil, nil, nil, nil, nil])
+
+
+# 15 kata
+
+#Simple, given a string of words, return the length of the shortest word(s). 
+#String will never be empty and you do not need to account for different data types.
+
+def find_short(s)
+    return s.split(" ").min_by(&:length).size
+end
+
+puts find_short("bitcoin two take over the world maybe who knows perhaps")
+puts find_short("turns out random test cases are easier than writing out basic ones")
