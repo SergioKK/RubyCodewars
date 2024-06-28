@@ -12,9 +12,6 @@ def find_difference(a, b)
     (a.inject(:*) - b.reduce(:*)).abs
 end
 
-# puts find_difference([3, 2, 5], [1, 4, 4])
-# puts find_difference([9, 7, 2], [5, 2, 2])
-
 
 # 12 kata
 
@@ -25,12 +22,8 @@ If the input array is empty consider it as: [0] (array with a zero).
 =end
 
 def odd_or_even(array)
-    array.sum % 2 == 0 ? "even" : "odd"
+    array.sum.even? ? "even" : "odd"
 end
-
-# puts odd_or_even([0])
-# puts odd_or_even([1])
-# puts odd_or_even([-1023, 1, -2])
 
 
 # 13 kata
@@ -52,11 +45,6 @@ end
 def quarter_of(month)
     (month/3.0).ceil
 end
-
-# puts quarter_of(1)
-# puts quarter_of(4)
-# puts quarter_of(5)
-# puts quarter_of(7)
 
 
 # 14 kata
@@ -81,9 +69,6 @@ def number lines
     lines.map.with_index(1) { |l, i| "#{i}: #{l}" }
 end
 
-# puts number(["a", "b", "c"])
-# puts number([nil, nil, nil, nil, nil])
-
 
 # 15 kata
 
@@ -93,9 +78,6 @@ end
 def find_short(s)
     return s.split(" ").min_by(&:length).size
 end
-
-# puts find_short("bitcoin two take over the world maybe who knows perhaps")
-# puts find_short("turns out random test cases are easier than writing out basic ones")
 
 
 # 16 kata
@@ -107,9 +89,6 @@ def abbrev_name(name)
     name.split(" ").map { |word| word[0].upcase }.join(".")
 end
 
-# puts abbrev_name("Sam Harris")
-# puts abbrev_name("sam garris")
-
 
 # 17 kata
 # Calculator
@@ -119,18 +98,12 @@ def arithmetic(a, b, operator)
     a.send operators[operator], b
 end
 
-# puts arithmetic(1, 2, "add")
-# puts arithmetic(8, 2, "subtract")
-# puts arithmetic(8, 2, "divide")
-
 
 # 18 kata
 
 def accum(s)
 	s.split("").map.with_index { |char, index| "#{char*(index+1)}".capitalize }.join("-")
 end
-
-# puts accum("ZpglnRxqenU")
 
 
 # 19 kata
@@ -154,9 +127,6 @@ def encrypt(text, n)
     text
 end
 
-# puts encrypt("This is a test!", 1)
-# puts encrypt("This is a test!", 2)
-
 
 def decrypt(encrypted_text, n)
     n.times do
@@ -174,9 +144,6 @@ def decrypt(encrypted_text, n)
     end
     encrypted_text
 end
-
-# puts decrypt("hsi  etTi sats!", 1)
-# puts decrypt("s eT ashi tist!", 2)
 
 # Best practice
 
@@ -216,5 +183,65 @@ def is_anagram(test, original)
     test.downcase.chars.sort == original.downcase.chars.sort
 end
 
-# puts is_anagram('Creative', 'Reactive')
-# puts is_anagram("foefet", "toffee")
+
+require "minitest/autorun"
+
+class MyTest < Minitest::Test
+  def test_11_kata_difference_of_the_cuboids
+    assert_equal(14, find_difference([3, 2, 5], [1, 4, 4]))
+    assert_equal(106, find_difference([9, 7, 2], [5, 2, 2]))
+  end
+
+  def test_12_kata
+    assert_equal("even", odd_or_even([0]))
+    assert_equal("odd", odd_or_even([1]))
+    assert_equal("even", odd_or_even([-1023, 1, -2]))
+  end
+
+  def test_13_kata
+    assert_equal(1, quarter_of(1)) 
+    assert_equal(2, quarter_of(4)) 
+    assert_equal(2, quarter_of(5)) 
+    assert_equal(3, quarter_of(7)) 
+  end
+
+  def test_14_kata
+    assert_equal(["1: a", "2: b", "3: c"], number(["a", "b", "c"]))
+    assert_equal(["1: ", "2: ", "3: ", "4: ", "5: "], number([nil, nil, nil, nil, nil]))
+  end
+
+  def test_15_kata
+    assert_equal(3, find_short("bitcoin two take over the world maybe who knows perhaps"))
+    assert_equal(3, find_short("turns out random test cases are easier than writing out basic ones"))
+  end
+
+  def test_16_kata
+    assert_equal("S.H", abbrev_name("Sam Harris"))
+    assert_equal("S.G", abbrev_name("sam garris"))
+  end
+
+  def test_17_kata
+    assert_equal(3, arithmetic(1, 2, "add"))
+    assert_equal(6, arithmetic(8, 2, "subtract"))
+    assert_equal(4, arithmetic(8, 2, "divide"))
+  end
+
+  def test_18_kata
+    assert_equal("Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu", accum("ZpglnRxqenU"))
+  end
+
+  def test_19_kata_encrypt
+    assert_equal("hsi  etTi sats!", encrypt("This is a test!", 1))
+    assert_equal("s eT ashi tist!", encrypt("This is a test!", 2))
+  end
+
+  def test_19_kata_decrypt
+    assert_equal("This is a test!", decrypt("hsi  etTi sats!", 1))
+    assert_equal("This is a test!", decrypt("s eT ashi tist!", 2))
+  end
+
+  def test_20_kata
+    assert_equal(true, is_anagram('Creative', 'Reactive'))
+    assert_equal(true, is_anagram("foefet", "toffee"))
+  end
+end

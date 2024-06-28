@@ -46,8 +46,7 @@ for each incorrect answer, and +0 for each blank answer, represented as an empty
 def check_exam(arr1,arr2)
     result = 0
     i = 0
-    4.times do
-            
+    4.times do   
         if arr1[i] == arr2[i]
             result += 4
         elsif arr2[i] == ""
@@ -60,7 +59,15 @@ def check_exam(arr1,arr2)
     result < 0 ? 0 : result
 end
 
-puts check_exam(["a", "a", "b", "b"], ["a", "c", "b", "d"])
-puts check_exam(["a", "a", "c", "b"], ["", "a", "b",  ""])
-puts check_exam(["b", "c", "b", "a"], ["",  "a", "a", "c"])
+# puts check_exam(["a", "a", "b", "b"], ["a", "c", "b", "d"])
+# puts check_exam(["a", "a", "c", "b"], ["", "a", "b",  ""])
+# puts check_exam(["b", "c", "b", "a"], ["",  "a", "a", "c"])
 
+class String
+    def abrakadabra
+        puts "new"
+    end
+end
+
+a = "a"
+a.abrakadabra
