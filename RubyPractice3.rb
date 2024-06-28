@@ -29,7 +29,38 @@ end
 
 def is_triangle(a,b,c)
     a, b, c = [a, b, c].sort!
-    false if c > a + b
+    a + b > c
  end
 
- puts is_triangle(7,2,2)
+#  puts is_triangle(7,2,2)
+
+
+# 23 kata
+
+=begin
+The first input array is the key to the correct answers to an exam, like ["a", "a", "b", "d"]. The second one contains a student's submitted answers.
+The two arrays are not empty and are the same length. Return the score for this array of answers, giving +4 for each correct answer, -1 
+for each incorrect answer, and +0 for each blank answer, represented as an empty string (in C the space character is used).
+=end
+
+def check_exam(arr1,arr2)
+    result = 0
+    i = 0
+    4.times do
+            
+        if arr1[i] == arr2[i]
+            result += 4
+        elsif arr2[i] == ""
+            result += 0
+        else
+            result -= 1
+        end 
+        i += 1
+    end
+    result < 0 ? 0 : result
+end
+
+puts check_exam(["a", "a", "b", "b"], ["a", "c", "b", "d"])
+puts check_exam(["a", "a", "c", "b"], ["", "a", "b",  ""])
+puts check_exam(["b", "c", "b", "a"], ["",  "a", "a", "c"])
+
