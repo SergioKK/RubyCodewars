@@ -130,4 +130,73 @@ def accum(s)
 	s.split("").map.with_index { |char, index| "#{char*(index+1)}".capitalize }.join("-")
 end
 
-puts accum("ZpglnRxqenU")
+# puts accum("ZpglnRxqenU")
+
+
+# 19 kata
+
+=begin
+Implement a pseudo-encryption algorithm which given a string S and an integer N 
+concatenates all the odd-indexed characters of S with all the even-indexed characters of S,
+this process should be repeated N times.
+=end
+
+def encrypt(text, n)
+    odd_index, even_index = [], []
+    while n > 0
+        text.each_char.with_index do |char, index|
+            index.even? ? even_index << char : odd_index << char
+        end
+        n -= 1
+        text = odd_index.join("") + even_index.join
+        odd_index, even_index = [], []
+    end
+    text
+end
+
+# puts encrypt("This is a test!", 1)
+# puts encrypt("This is a test!", 2)
+
+
+def decrypt(encrypted_text, n)
+    n.times do
+        middle = encrypted_text.length/2
+        first_half = encrypted_text.slice(0..middle-1)
+        second_half = encrypted_text.slice(middle..-1)
+
+        encrypted_text = ""
+        m = 0
+
+        while m < second_half.length
+            encrypted_text += [second_half[m], first_half[m]].join
+            m += 1
+        end
+    end
+    encrypted_text
+end
+
+puts decrypt("hsi  etTi sats!", 1)
+puts decrypt("s eT ashi tist!", 2)
+
+# Best practice
+
+def encrypt(text, n)
+    return text if n <= 0
+
+    arr1 = text.chars.select.with_index{|_,idx| idx.odd?}
+    arr2 = text.chars.select.with_index{|_,idx| idx.even?}
+
+    encrypt( (arr1 + arr2).join , n-1)
+end
+
+
+
+def decrypt(encrypted_text, n)
+    return encrypted_text if n <= 0
+
+    midpoint = encrypted_text.length/2
+    arr1 = encrypted_text[0...midpoint].chars
+    arr2 = encrypted_text[midpoint ..-1].chars
+
+    decrypt( arr2.zip(arr1).join , n-1)
+end
