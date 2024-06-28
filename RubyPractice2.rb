@@ -175,8 +175,8 @@ def decrypt(encrypted_text, n)
     encrypted_text
 end
 
-puts decrypt("hsi  etTi sats!", 1)
-puts decrypt("s eT ashi tist!", 2)
+# puts decrypt("hsi  etTi sats!", 1)
+# puts decrypt("s eT ashi tist!", 2)
 
 # Best practice
 
@@ -200,3 +200,21 @@ def decrypt(encrypted_text, n)
 
     decrypt( arr2.zip(arr1).join , n-1)
 end
+
+
+# 20 kata
+
+=begin
+An anagram is the result of rearranging the letters of a word to produce a new word (see wikipedia).
+
+Note: anagrams are case insensitive
+
+Complete the function to return true if the two arguments given are anagrams of each other; return false otherwise.
+=end
+
+def is_anagram(test, original)
+    test.downcase.chars.sort == original.downcase.chars.sort
+end
+
+# puts is_anagram('Creative', 'Reactive')
+# puts is_anagram("foefet", "toffee")
