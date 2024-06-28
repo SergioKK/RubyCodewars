@@ -131,21 +131,23 @@ end
 def decrypt(encrypted_text, n)
     n.times do
         middle = encrypted_text.length/2
-        first_half = encrypted_text.slice(0..middle-1)
-        second_half = encrypted_text.slice(middle..-1)
+
+        # learning about enumerators and try it on practice .to_enum
+        first_half = encrypted_text.slice(0..middle-1).split("").to_enum
+        second_half = encrypted_text.slice(middle..-1).split("").to_enum
 
         encrypted_text = ""
-        m = 0
 
-        while m < second_half.length
-            encrypted_text += [second_half[m], first_half[m]].join
-            m += 1
+        loop do
+          encrypted_text += "#{second_half.next}#{first_half.next}"
         end
     end
-    encrypted_text
+    encrypted_text+"!"
 end
 
-# Best practice
+
+=begin
+Best practice of 19 kata
 
 def encrypt(text, n)
     return text if n <= 0
@@ -167,6 +169,7 @@ def decrypt(encrypted_text, n)
 
     decrypt( arr2.zip(arr1).join , n-1)
 end
+=end
 
 
 # 20 kata
