@@ -63,3 +63,12 @@ end
 def min_value(digits)
     digits.sort.uniq.join.to_i
 end
+
+
+# 25 kata
+
+# Given a string str, reverse it and omit all non-alphabetic characters.
+
+def reverse_letter(str)
+    str.reverse.chars.select { |char| char.match(/[A-Za-z]/) }.join
+end

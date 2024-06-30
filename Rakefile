@@ -7,6 +7,6 @@ require 'rake/testtask'
 task :default => :test
 
 task :test do
-  ruby './test/TestRubyPractice3.rb'
+  ruby 'load_path.rb'
 end
 

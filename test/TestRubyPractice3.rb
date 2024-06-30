@@ -22,4 +22,10 @@ class MyTest < Minitest::Test
         assert_equal(min_value([4, 7, 5, 7]), 457)
         assert_equal(min_value([4, 8, 1, 4]), 148)
     end
+
+    def test_25_kata
+        assert_equal(reverse_letter("krishan"),"nahsirk")
+        assert_equal(reverse_letter("ultr53o?n"),"nortlu")
+        assert_equal(reverse_letter("krish21an"),"nahsirk")
+    end
 end
