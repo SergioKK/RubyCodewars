@@ -82,7 +82,6 @@ end
 # example wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
 
 def wave(str)
-    number_of_chars = str.split(" ").length
     string_to_change = str.split("")
     result_arr = []
     string_to_change.each.with_index do |char, index|
@@ -94,4 +93,14 @@ def wave(str)
         end
     end
     result_arr
+end
+
+# 27 kata
+# learn how to use proc
+
+def apply_blocks(number, blocks)
+    blocks.each do |block|
+        number = block.call(number)
+    end
+    number
 end

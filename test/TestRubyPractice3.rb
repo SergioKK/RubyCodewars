@@ -34,4 +34,13 @@ class MyTest < Minitest::Test
         assert_equal(wave(" gap "), [" Gap ", " gAp ", " gaP "])
         assert_equal(wave("hello"), ["Hello", "hEllo", "heLlo", "helLo", "hellO"])
     end
+
+    def test_27_kata
+        proc1 = proc { |x| x + 1}
+        proc2 = proc { |x| x * 2}
+
+        assert_equal(12, apply_blocks(5, [proc1, proc2]))
+        assert_equal(11, apply_blocks(5, [proc2, proc1])) 
+    end
+
 end
