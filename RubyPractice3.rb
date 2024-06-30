@@ -71,4 +71,27 @@ end
 
 def reverse_letter(str)
     str.reverse.chars.select { |char| char.match(/[A-Za-z]/) }.join
+
+    # better way
+    # string.delete("^A-Za-z").reverse
+end
+
+
+# 26 kata
+
+# example wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
+
+def wave(str)
+    number_of_chars = str.split(" ").length
+    string_to_change = str.split("")
+    result_arr = []
+    string_to_change.each.with_index do |char, index|
+        if char != " "
+            string_to_change[index] = char.upcase
+            new_arr = string_to_change.dup
+            result_arr << new_arr.join
+            string_to_change[index] = char.downcase
+        end
+    end
+    result_arr
 end

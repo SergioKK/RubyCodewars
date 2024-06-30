@@ -28,4 +28,10 @@ class MyTest < Minitest::Test
         assert_equal(reverse_letter("ultr53o?n"),"nortlu")
         assert_equal(reverse_letter("krish21an"),"nahsirk")
     end
+
+    def test_26_kata
+        assert_equal(wave("a       b    "), ["A       b    ", "a       B    "])
+        assert_equal(wave(" gap "), [" Gap ", " gAp ", " gaP "])
+        assert_equal(wave("hello"), ["Hello", "hEllo", "heLlo", "helLo", "hellO"])
+    end
 end
