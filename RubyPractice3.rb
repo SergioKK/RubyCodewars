@@ -18,8 +18,6 @@ def alphabet_position(text)
     text.downcase.bytes.map { |char| char - 96}
 end
 
-# puts alphabet_position("The sunset sets at twelve o' clock.")
-
 
 # 22 kata
 
@@ -31,8 +29,6 @@ def is_triangle(a,b,c)
     a, b, c = [a, b, c].sort!
     a + b > c
  end
-
-#  puts is_triangle(7,2,2)
 
 
 # 23 kata
@@ -59,15 +55,11 @@ def check_exam(arr1,arr2)
     result < 0 ? 0 : result
 end
 
-# puts check_exam(["a", "a", "b", "b"], ["a", "c", "b", "d"])
-# puts check_exam(["a", "a", "c", "b"], ["", "a", "b",  ""])
-# puts check_exam(["b", "c", "b", "a"], ["",  "a", "a", "c"])
 
-class String
-    def abrakadabra
-        puts "new"
-    end
+# 24 kata
+
+# Given a list of digits, return the smallest number that could be formed from these digits, using the digits only once (ignore duplicates).
+
+def min_value(digits)
+    digits.sort.uniq.join.to_i
 end
-
-a = "a"
-a.abrakadabra
