@@ -43,4 +43,10 @@ class MyTest < Minitest::Test
         assert_equal(11, apply_blocks(5, [proc2, proc1])) 
     end
 
+    def test_28_kata
+        assert_equal(nb_year(1500, 5, 100, 5000), 15)
+        assert_equal(nb_year(1500000, 2.5, 10000, 2000000), 10)
+        assert_equal(nb_year(1500000, 0.25, 1000, 2000000), 94)
+    end
+
 end
