@@ -48,5 +48,11 @@ class MyTest < Minitest::Test
         assert_equal(nb_year(1500000, 2.5, 10000, 2000000), 10)
         assert_equal(nb_year(1500000, 0.25, 1000, 2000000), 94)
     end
+    
+    def test_29_kata
+        assert_equal(check([78, 117, 110, 99, 104, 117, 107, 115], 8), false)
+        assert_equal(check([101, 45, 75, 105, 99, 107], 107), true)
+        assert_equal(check(["t", "e", "s", "t"], "e"), true)
+    end
 
 end

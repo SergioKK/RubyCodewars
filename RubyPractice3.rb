@@ -120,3 +120,14 @@ def nb_year(p0, percent, aug, p)
     end
     years
 end
+
+# 29 kata
+=begin
+You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
+Array can contain numbers or strings. X can be either.
+Return true if the array contains the value, false if not.
+=end
+
+def check(arr, value)
+    arr.include?(value)
+end
