@@ -55,4 +55,10 @@ class MyTest < Minitest::Test
         assert_equal(check(["t", "e", "s", "t"], "e"), true)
     end
 
+    def test_30_kata
+        assert_equal(count_chars("aba"), {"a" => 2, "b" => 1})
+        assert_equal(count_chars("abba"), {"a" => 2, "b" => 2})
+        assert_equal(count_chars(""), {})
+    end
+
 end

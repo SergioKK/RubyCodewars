@@ -95,6 +95,7 @@ def wave(str)
     result_arr
 end
 
+
 # 27 kata
 # learn how to use proc
 
@@ -104,6 +105,7 @@ def apply_blocks(number, blocks)
     end
     number
 end
+
 
 # 28 kata
 =begin
@@ -121,6 +123,7 @@ def nb_year(p0, percent, aug, p)
     years
 end
 
+
 # 29 kata
 =begin
 You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
@@ -130,4 +133,15 @@ Return true if the array contains the value, false if not.
 
 def check(arr, value)
     arr.include?(value)
+end
+
+
+# 30 kata
+=begin
+The main idea is to count all the occurring characters in a string. If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
+What if the string is empty? Then the result should be empty object literal, {}.
+=end    
+
+def count_chars(s)
+    s.split("").tally
 end
