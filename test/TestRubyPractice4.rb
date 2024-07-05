@@ -33,6 +33,13 @@ class MyTest < Minitest::Test
         assert_equal(mxdiflg(s1, s2), 10)
         s1 = []
         s2 = ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"]
-        # assert_equal(mxdiflg(s1, s2), -1)
+        assert_equal(mxdiflg(s1, s2), -1)
+    end
+
+    def test_35_kata
+        assert_equal(small_enough([66, 101], 200), true)
+        assert_equal(small_enough([78, 117, 110, 99, 104, 117, 107, 115], 100), false)
+        assert_equal(small_enough([101, 45, 75, 105, 99, 107], 107), true)
+        assert_equal(small_enough([80, 117, 115, 104, 45, 85, 112, 115], 120), true)
     end
 end

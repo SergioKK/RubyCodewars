@@ -1,3 +1,5 @@
+# 31 kata
+
 =begin
 Write a function that takes a single non-empty string of only lowercase and uppercase ascii letters (word) as its argument, 
 and returns an ordered list containing the indices of all capital (uppercase) letters in the string.
@@ -13,6 +15,8 @@ def capitals(word)
     arr
 end
 
+
+# 32 kata
 
 =begin
 Given an array of integers, remove the smallest value. 
@@ -30,11 +34,16 @@ def remove_smallest(numbers)
 end
 
 
+# 33 kata
+
 # Write a function that returns a string in which firstname is swapped with last name.
 
 def name_shuffler(str)
     str.split(" ").reverse.join(" ")
 end
+
+
+# 34 kata
 
 =begin
 You are given two arrays a1 and a2 of strings. Each string is composed with letters from a to z. 
@@ -51,4 +60,17 @@ def mxdiflg(a1, a2)
     second_val = a1.max_by(&:length).length - a2.min_by(&:length).length
     [first_val, second_val].max
 end
-  
+
+
+# 35 kata
+
+=begin
+You will be given an array and a limit value. 
+You must check that all values in the array are below or equal to the limit value. 
+If they are, return true. Else, return false.
+You can assume all values in the array are numbers.
+=end
+
+def small_enough(a, limit)
+    a.map { |num| num <= limit }.all?
+end
