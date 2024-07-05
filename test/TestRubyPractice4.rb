@@ -17,4 +17,10 @@ class MyTest < Minitest::Test
         assert_equal(remove_smallest([]), [])
         assert_equal(remove_smallest([2, 2, 1, 2, 1]), [2, 2, 2, 1])
     end
+
+    def test_33_kata
+        assert_equal(name_shuffler('john McClane'),'McClane john')
+        assert_equal(name_shuffler('Mary jeggins'),'jeggins Mary')
+        assert_equal(name_shuffler('tom jerry'),'jerry tom')
+    end
 end

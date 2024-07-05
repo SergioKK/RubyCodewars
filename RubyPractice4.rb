@@ -28,4 +28,11 @@ def remove_smallest(numbers)
     new_numbers.delete_at(new_numbers.index(new_numbers.min))
     new_numbers
 end
+
+
+# Write a function that returns a string in which firstname is swapped with last name.
+
+def name_shuffler(str)
+    str.split(" ").reverse.join(" ")
+end
   
