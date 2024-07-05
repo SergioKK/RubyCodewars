@@ -35,4 +35,20 @@ end
 def name_shuffler(str)
     str.split(" ").reverse.join(" ")
 end
+
+=begin
+You are given two arrays a1 and a2 of strings. Each string is composed with letters from a to z. 
+Let x be any string in the first array and y be any string in the second array.
+
+Find max(abs(length(x) − length(y)))
+
+If a1 and/or a2 are empty return -1 in each language except in Haskell (F#) where you will return Nothing (None).
+=end
+
+def mxdiflg(a1, a2)
+    return -1 if a1.empty? || a2.empty?
+    first_val = a2.max_by(&:length).length - a1.min_by(&:length).length
+    second_val = a1.max_by(&:length).length - a2.min_by(&:length).length
+    [first_val, second_val].max
+end
   

@@ -23,4 +23,16 @@ class MyTest < Minitest::Test
         assert_equal(name_shuffler('Mary jeggins'),'jeggins Mary')
         assert_equal(name_shuffler('tom jerry'),'jerry tom')
     end
+
+    def test_34_kata
+        s1 = ["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa", "xxwwkktt", "znnnnfqknaz", "qqquuhii", "dvvvwz"]
+        s2 = ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"]
+        assert_equal(mxdiflg(s1, s2), 13)
+        s1 = ["ejjjjmmtthh", "zxxuueeg", "aanlljrrrxx", "dqqqaaabbb", "oocccffuucccjjjkkkjyyyeehh"]
+        s2 = ["bbbaaayddqbbrrrv"]
+        assert_equal(mxdiflg(s1, s2), 10)
+        s1 = []
+        s2 = ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"]
+        # assert_equal(mxdiflg(s1, s2), -1)
+    end
 end
