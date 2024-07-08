@@ -48,4 +48,9 @@ class MyTest < Minitest::Test
         assert_equal(say_hello(['John'], 'Phoenix', 'Arizona'), "Hello, John! Welcome to Phoenix, Arizona!")
     end
 
+    def test_37_kata
+        assert_equal(two_sort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]), 'b***i***t***c***o***i***n' )
+        assert_equal(two_sort(["i", "want", "to", "travel", "the", "world", "writing", "code", "one", "day"]), 'c***o***d***e')
+    end
+
 end
