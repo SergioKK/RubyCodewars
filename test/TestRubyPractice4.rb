@@ -59,4 +59,10 @@ class MyTest < Minitest::Test
         assert_equal(replace("ABCDE") , "!BCD!")
     end
 
+    def test_38_kata
+        assert_equal(find_uniq([1,1,1,1,0]), 0)
+        assert_equal(find_uniq([ 1, 1, 1, 2, 1, 1 ]), 2)
+        assert_equal(find_uniq([ 0, 0, 0.55, 0, 0 ]), 0.55)
+    end
+
 end

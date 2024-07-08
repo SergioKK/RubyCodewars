@@ -103,10 +103,20 @@ def two_sort(s)
     s.sort[0].split("").join("***")
 end
 
+
 # 38 kata
 
 # Replace all vowel to exclamation mark in the sentence. aeiouAEIOU is vowel.
 
 def replace(s)
     s.gsub(/[aeiouAEIOU]/, "!")
+end
+
+
+# 39 kata
+
+# There is an array with some numbers. All numbers are equal except for one. Try to find it!
+
+def find_uniq(arr)
+    arr.tally.key(1)
 end
