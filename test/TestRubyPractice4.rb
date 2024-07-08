@@ -42,4 +42,10 @@ class MyTest < Minitest::Test
         assert_equal(small_enough([101, 45, 75, 105, 99, 107], 107), true)
         assert_equal(small_enough([80, 117, 115, 104, 45, 85, 112, 115], 120), true)
     end
+
+    def test_36_kata
+        assert_equal(say_hello(['John', 'Smith'], 'Phoenix', 'Arizona'), "Hello, John Smith! Welcome to Phoenix, Arizona!")
+        assert_equal(say_hello(['John'], 'Phoenix', 'Arizona'), "Hello, John! Welcome to Phoenix, Arizona!")
+    end
+
 end
