@@ -102,3 +102,11 @@ You should not remove or add elements from/to the array.
 def two_sort(s)
     s.sort[0].split("").join("***")
 end
+
+# 38 kata
+
+# Replace all vowel to exclamation mark in the sentence. aeiouAEIOU is vowel.
+
+def replace(s)
+    s.gsub(/[aeiouAEIOU]/, "!")
+end

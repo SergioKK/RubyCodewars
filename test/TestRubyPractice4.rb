@@ -49,8 +49,14 @@ class MyTest < Minitest::Test
     end
 
     def test_37_kata
-        assert_equal(two_sort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]), 'b***i***t***c***o***i***n' )
+        assert_equal(two_sort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]), 'b***i***t***c***o***i***n')
         assert_equal(two_sort(["i", "want", "to", "travel", "the", "world", "writing", "code", "one", "day"]), 'c***o***d***e')
+    end
+
+    def test_37_kata
+        assert_equal(replace("Hi!") , "H!!")
+        assert_equal(replace("aeiou") , "!!!!!")
+        assert_equal(replace("ABCDE") , "!BCD!")
     end
 
 end
