@@ -19,3 +19,13 @@ end
 def flatten_and_sort(array)
     array.flatten.sort
 end
+
+
+# 42 kata
+
+# Finish the solution so that it sorts the passed in array of numbers. 
+#If the function passes in an empty array or null/nil value then it should return an empty array.
+
+def solution(nums)
+    nums ? nums.sort! : []
+end
