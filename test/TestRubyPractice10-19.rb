@@ -1,7 +1,12 @@
 require "minitest/autorun"
-require_relative "RubyPractice2"
+require_relative "/home/sergio/RubyCodewars/RubyPractice10-19.rb"
 
 class MyTest < Minitest::Test
+  def test_11_kata_difference_of_the_cuboids
+    assert_equal(no_boring_zeros(1000), 1)
+    assert_equal()
+  end
+
   def test_11_kata_difference_of_the_cuboids
     assert_equal(14, find_difference([3, 2, 5], [1, 4, 4]))
     assert_equal(106, find_difference([9, 7, 2], [5, 2, 2]))

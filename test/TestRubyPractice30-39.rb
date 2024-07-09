@@ -1,5 +1,5 @@
 require "minitest/autorun"
-require_relative "/home/sergio/RubyCodewars/RubyPractice4.rb"
+require_relative "/home/sergio/RubyCodewars/RubyPractice30-39.rb"
 
 class MyTest < Minitest::Test
     def test_31_kata
@@ -53,13 +53,13 @@ class MyTest < Minitest::Test
         assert_equal(two_sort(["i", "want", "to", "travel", "the", "world", "writing", "code", "one", "day"]), 'c***o***d***e')
     end
 
-    def test_37_kata
+    def test_38_kata
         assert_equal(replace("Hi!") , "H!!")
         assert_equal(replace("aeiou") , "!!!!!")
         assert_equal(replace("ABCDE") , "!BCD!")
     end
 
-    def test_38_kata
+    def test_39_kata
         assert_equal(find_uniq([1,1,1,1,0]), 0)
         assert_equal(find_uniq([ 1, 1, 1, 2, 1, 1 ]), 2)
         assert_equal(find_uniq([ 0, 0, 0.55, 0, 0 ]), 0.55)

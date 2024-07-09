@@ -1,5 +1,5 @@
 require "minitest/autorun"
-require_relative "/home/sergio/RubyCodewars/RubyPractice3.rb"
+require_relative "/home/sergio/RubyCodewars/RubyPractice20-29.rb"
 
 class MyTest < Minitest::Test
     def test_21_kata

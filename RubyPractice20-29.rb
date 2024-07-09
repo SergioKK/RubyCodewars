@@ -1,3 +1,18 @@
+# 20 kata
+
+=begin
+An anagram is the result of rearranging the letters of a word to produce a new word (see wikipedia).
+
+Note: anagrams are case insensitive
+
+Complete the function to return true if the two arguments given are anagrams of each other; return false otherwise.
+=end
+
+def is_anagram(test, original)
+    test.downcase.chars.sort == original.downcase.chars.sort
+end
+
+
 # 21 kata
 
 =begin
@@ -133,15 +148,4 @@ Return true if the array contains the value, false if not.
 
 def check(arr, value)
     arr.include?(value)
-end
-
-
-# 30 kata
-=begin
-The main idea is to count all the occurring characters in a string. If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
-What if the string is empty? Then the result should be empty object literal, {}.
-=end    
-
-def count_chars(s)
-    s.split("").tally
 end

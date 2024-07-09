@@ -1,3 +1,30 @@
+# 10 kata
+# Numbers ending with zeros are boring. They might be fun in your world, but not here. Get rid of them. Only the ending ones.
+
+# my solution
+def no_boring_zeros(num)
+    if num == 0
+        return num
+    end
+    while num % 10 == 0
+        num /= 10
+    end
+    num
+end
+
+# less lines
+def no_boring_zeros(num)
+    return num if num.zero?
+    num /= 10 until num % 10 != 0
+    num
+end
+
+# through regexp
+def no_boring_zeros(num)
+    num.to_s.gsub(/[0]+$/,"").to_i
+end
+
+
 # 11 kata
 
 =begin
@@ -170,18 +197,3 @@ def decrypt(encrypted_text, n)
     decrypt( arr2.zip(arr1).join , n-1)
 end
 =end
-
-
-# 20 kata
-
-=begin
-An anagram is the result of rearranging the letters of a word to produce a new word (see wikipedia).
-
-Note: anagrams are case insensitive
-
-Complete the function to return true if the two arguments given are anagrams of each other; return false otherwise.
-=end
-
-def is_anagram(test, original)
-    test.downcase.chars.sort == original.downcase.chars.sort
-end
