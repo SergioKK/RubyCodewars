@@ -2,9 +2,9 @@ require "minitest/autorun"
 require_relative "/home/sergio/RubyCodewars/RubyPractice10-19.rb"
 
 class MyTest < Minitest::Test
-  def test_11_kata_difference_of_the_cuboids
+  def test_10_kata_difference_of_the_cuboids
     assert_equal(no_boring_zeros(1000), 1)
-    assert_equal()
+    assert_equal(no_boring_zeros(145000), 145)
   end
 
   def test_11_kata_difference_of_the_cuboids
@@ -58,10 +58,5 @@ class MyTest < Minitest::Test
   def test_19_kata_decrypt
     assert_equal("This is a test!", decrypt("hsi  etTi sats!", 1))
     assert_equal("This is a test!", decrypt("s eT ashi tist!", 2))
-  end
-
-  def test_20_kata
-    assert_equal(true, is_anagram('Creative', 'Reactive'))
-    assert_equal(true, is_anagram("foefet", "toffee"))
   end
 end

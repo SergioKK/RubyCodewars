@@ -2,6 +2,12 @@ require "minitest/autorun"
 require_relative "/home/sergio/RubyCodewars/RubyPractice30-39.rb"
 
 class MyTest < Minitest::Test
+    def test_30_kata
+        assert_equal(count_chars("aba"), {"a" => 2, "b" => 1})
+        assert_equal(count_chars("abba"), {"a" => 2, "b" => 2})
+        assert_equal(count_chars(""), {})
+    end
+    
     def test_31_kata
         assert_equal(capitals('CodEWaRs'), [0,3,4,6])
         assert_equal(capitals('4ysdf4'), [])
