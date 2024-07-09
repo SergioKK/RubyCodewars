@@ -29,3 +29,20 @@ end
 def solution(nums)
     nums ? nums.sort! : []
 end
+
+
+# 43 kata
+
+# Your task, is to create N×N multiplication table, of size provided in parameter.
+
+def multiplication_table(size)
+    arr = []
+    initial_arr = (1..size).to_a
+    time = 1
+    size.times do
+        
+        arr << initial_arr.map { |num| num * time }
+        time += 1
+    end
+    arr
+end

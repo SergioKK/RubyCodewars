@@ -21,4 +21,8 @@ class MyTest < Minitest::Test
         assert_equal(solution([]), [])
         assert_equal(solution([20, 2, 10]), [2, 10, 20])
     end
+
+    def test_43_kata
+        assert_equal(multiplication_table(3), [[1,2,3],[2,4,6],[3,6,9]])
+    end
 end
