@@ -32,4 +32,11 @@ class MyTest < Minitest::Test
         assert_equal(friend(["Jimm", "Cari", "aret", "truehdnviegkwgvke", "sixtyiscooooool"]), ["Jimm", "Cari", "aret"])
         assert_equal(friend(["Love", "Your", "Face", "1"]), ["Love", "Your", "Face"])
     end
+
+    def test_45_kata
+        assert_equal(row_weights([80]), [80,0])
+        assert_equal(row_weights([100,50]), [100,50])
+        assert_equal(row_weights([50,60,70,80]), [120,140])
+        assert_equal(row_weights([13,27,49]), [62,27])
+    end
 end

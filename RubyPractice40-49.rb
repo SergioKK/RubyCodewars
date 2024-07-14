@@ -55,3 +55,19 @@ end
 def friend(friends)
     friends.reject { |friend| friend.chars.count != 4 }
 end
+
+
+# 45 kata
+
+#Given an array of positive integers (the weights of the people), 
+#return a new array/tuple of two integers, where the first one is the total weight of team 1, and the second one is the total weight of team 2.
+
+def row_weights(array)
+    first_team = array.select.with_index { |num, index| index.even? }
+    first_team_weight = first_team.inject(:+)
+
+    second_team = array.select.with_index { |num, index| index.odd? }
+    second_team_weight = second_team.empty? ? 0 : second_team.inject(:+) 
+    
+    [first_team_weight, second_team_weight]
+end
