@@ -25,4 +25,11 @@ class MyTest < Minitest::Test
     def test_43_kata
         assert_equal(multiplication_table(3), [[1,2,3],[2,4,6],[3,6,9]])
     end
+
+    def test_44_kata
+        assert_equal(friend(["Ryan", "Kieran", "Mark"]), ["Ryan", "Mark"])
+        assert_equal(friend(["Ryan", "Jimmy", "123", "4", "Cool Man"]), ["Ryan"])
+        assert_equal(friend(["Jimm", "Cari", "aret", "truehdnviegkwgvke", "sixtyiscooooool"]), ["Jimm", "Cari", "aret"])
+        assert_equal(friend(["Love", "Your", "Face", "1"]), ["Love", "Your", "Face"])
+    end
 end

@@ -40,9 +40,18 @@ def multiplication_table(size)
     initial_arr = (1..size).to_a
     time = 1
     size.times do
-        
         arr << initial_arr.map { |num| num * time }
         time += 1
     end
     arr
+end
+
+
+# 44 kata
+
+#Make a program that filters a list of strings and returns a list with only your friends name in it.
+#If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+
+def friend(friends)
+    friends.reject { |friend| friend.chars.count != 4 }
 end
