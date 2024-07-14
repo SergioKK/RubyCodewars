@@ -71,3 +71,20 @@ def row_weights(array)
     
     [first_team_weight, second_team_weight]
 end
+
+# better solution using .partition()
+
+def row_weights(array)
+    array.partition.with_index{ |_, i| i.even? }.map(&:sum)
+end
+
+
+# 46 kata
+
+# Each lowercase letter becomes uppercase and each uppercase letter becomes lowercase
+
+class String
+    def to_alternating_case
+      self.swapcase
+    end
+end

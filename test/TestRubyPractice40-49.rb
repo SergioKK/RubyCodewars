@@ -1,7 +1,9 @@
 require "minitest/autorun"
 require_relative "/home/sergio/RubyCodewars/RubyPractice40-49.rb"
 
+
 class MyTest < Minitest::Test
+
     def test_40_kata
         assert_equal(add_length('apple ban'), ["apple 5", "ban 3"])
         assert_equal(add_length('you will win'), ["you 3", "will 4", "win 3"])
@@ -38,5 +40,11 @@ class MyTest < Minitest::Test
         assert_equal(row_weights([100,50]), [100,50])
         assert_equal(row_weights([50,60,70,80]), [120,140])
         assert_equal(row_weights([13,27,49]), [62,27])
+    end
+
+    def test_46_kata
+        assert_equal("hello world".to_alternating_case(), "HELLO WORLD")
+        assert_equal("HELLO WORLD".to_alternating_case(), "hello world")
+        assert_equal("hello WORLD".to_alternating_case(), "HELLO world")
     end
 end
