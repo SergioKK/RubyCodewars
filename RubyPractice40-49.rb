@@ -88,3 +88,12 @@ class String
       self.swapcase
     end
 end
+
+
+# 47 kata
+
+#Your task is to write function factorial.
+
+def factorial(n)
+    n == 0 ? 1 : n*factorial(n-1)
+end

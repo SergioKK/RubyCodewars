@@ -47,4 +47,11 @@ class MyTest < Minitest::Test
         assert_equal("HELLO WORLD".to_alternating_case(), "hello world")
         assert_equal("hello WORLD".to_alternating_case(), "HELLO world")
     end
+
+    def test_47_kata
+        assert_equal(factorial(0), 1)
+        assert_equal(factorial(1), 1)
+        assert_equal(factorial(4), 24)
+        assert_equal(factorial(7), 5040)
+    end
 end
