@@ -54,4 +54,18 @@ class MyTest < Minitest::Test
         assert_equal(factorial(4), 24)
         assert_equal(factorial(7), 5040)
     end
+
+    def test_48_kata
+        assert_equal(remainder(17,5), 2, 'Returned value should be the value left over after dividing as much as possible.')
+        assert_equal(remainder(13, 72), remainder(72, 13), 'The order the arguments are passed should not matter.')
+        assert_equal(remainder(1, 0).nil?, true, 'Divide by zero should return nil')
+        assert_equal(remainder(0, 0).nil?, true, 'Divide by zero should return nil')
+    end
+
+    def test_49_kata
+        a = ["SOUTH", "EAST", "WEST", "NORTH", "WEST"]
+        assert_equal(dirReduc(a), ["WEST"])
+        u=["NORTH", "WEST", "SOUTH", "EAST"]
+        assert_equal(dirReduc(u), ["NORTH", "WEST", "SOUTH", "EAST"])
+    end
 end
