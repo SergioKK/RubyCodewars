@@ -25,4 +25,10 @@ class MyTest < Minitest::Test
       assert_equal(repeat_str(5, "#"),"#####")
       assert_equal(repeat_str(2, "ha "),"ha ha ")
     end
+
+    def test_53_kata
+      assert_equal(["i", "to", "beg", "life"], sort_by_length(["beg", "life", "i", "to"]))
+      assert_equal(["", "pizza", "brains", "moderately"], sort_by_length(["", "moderately", "brains", "pizza"]))
+      assert_equal(["a", "of", "dog", "food"], sort_by_length(["dog", "food", "a", "of"]))
+    end
 end

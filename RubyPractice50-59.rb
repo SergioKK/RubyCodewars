@@ -26,9 +26,19 @@ def get_grade(s1, s2, s3)
   'F'
 end
 
+
 # 52 kata
 # Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
 
 def repeat_str (n, s)
   s * n
+end
+
+
+# 53 kata
+# Write a function that takes an array of strings as an argument and returns a sorted array containing the same strings, 
+# ordered from shortest to longest.
+
+def sort_by_length(arr)
+  arr.sort_by(&:length)
 end
