@@ -25,3 +25,10 @@ def get_grade(s1, s2, s3)
   return 'D' if score >= 60
   'F'
 end
+
+# 52 kata
+# Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
+
+def repeat_str (n, s)
+  s * n
+end

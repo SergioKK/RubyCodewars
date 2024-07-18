@@ -19,4 +19,10 @@ class MyTest < Minitest::Test
       assert_equal(get_grade(80, 85, 96), "B")
       assert_equal(get_grade(92, 93, 94), "A")
     end
+
+    def test_52_kata
+      assert_equal(repeat_str(3, "*"),"***")
+      assert_equal(repeat_str(5, "#"),"#####")
+      assert_equal(repeat_str(2, "ha "),"ha ha ")
+    end
 end
