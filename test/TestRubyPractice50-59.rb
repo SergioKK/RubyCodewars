@@ -13,4 +13,10 @@ class MyTest < Minitest::Test
       assert_equal(get_drink_by_profession("rapper"), "Cristal")
       assert_equal(get_drink_by_profession("pundit"), "Beer")
     end
+
+    def test_51_kata
+      assert_equal(get_grade(95, 90, 93), "A")
+      assert_equal(get_grade(80, 85, 96), "B")
+      assert_equal(get_grade(92, 93, 94), "A")
+    end
 end
