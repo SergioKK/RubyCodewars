@@ -31,4 +31,12 @@ class MyTest < Minitest::Test
       assert_equal(["", "pizza", "brains", "moderately"], sort_by_length(["", "moderately", "brains", "pizza"]))
       assert_equal(["a", "of", "dog", "food"], sort_by_length(["dog", "food", "a", "of"]))
     end
+
+    def test_54_kata
+      assert_equal(round_to_next_5(5), 5)
+      assert_equal(round_to_next_5(6), 10)
+      assert_equal(round_to_next_5(12), 15)
+      assert_equal(round_to_next_5(9), 10)
+      assert_equal(round_to_next_5(16), 20)
+    end
 end

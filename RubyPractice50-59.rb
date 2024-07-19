@@ -42,3 +42,11 @@ end
 def sort_by_length(arr)
   arr.sort_by(&:length)
 end
+
+
+# 54 kata
+# Given an integer as input, can you round it to the next (meaning, "greater than or equal") multiple of 5?
+
+def round_to_next_5(n)
+  (n/5.0).ceil * 5
+end
