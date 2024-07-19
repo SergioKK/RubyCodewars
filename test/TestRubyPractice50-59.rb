@@ -45,4 +45,10 @@ class MyTest < Minitest::Test
       assert_equal(array('1,2,3,4'), '2 3')
       assert_equal(array('1,2,3,4,5'), '2 3 4')
     end
+
+    def test_56_kata
+      assert_equal(encrypt_this("hello world"), "104olle 119drlo")
+      assert_equal(encrypt_this("A wise old owl lived in an oak"), "65 119esi 111dl 111lw 108dvei 105n 97n 111ka")
+      assert_equal(encrypt_this("Thank you Piotr for all your help"), "84kanh 121uo 80roti 102ro 97ll 121ruo 104ple")
+    end
 end

@@ -56,6 +56,30 @@ end
 #Write a function which returns a new string containing the same character sequences except the first and the last ones but this time separated by spaces.
 
 def array(string)
-  return nil if string.split(",").length < 2
+  return nil if string.split(",").length <= 2
   string.split(",")[1..-2].join(" ")
+end
+
+
+# 56 kata
+=begin
+You want to create secret messages which can be deciphered by the Decipher this! kata. Here are the conditions:
+Your message is a string containing space separated words.
+You need to encrypt each word in the message using the following rules:
+The first letter must be converted to its ASCII code.
+The second letter must be switched with the last letter
+Keepin' it simple: There are no special characters in the input.  
+=end
+
+def encrypt_this(text)
+  splited_text = text.split(" ")
+  encrypted_text = []
+  splited_text.each do |word|
+    if word.length < 3
+      encrypted_text << "#{word.ord}#{word[1]}"
+    else
+      encrypted_text << "#{word.chars.first.ord}#{word[-1]}#{word[2..-2]}#{word[1]}"
+    end
+  end
+  encrypted_text.join(" ")
 end
