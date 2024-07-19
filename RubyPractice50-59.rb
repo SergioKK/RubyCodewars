@@ -50,3 +50,12 @@ end
 def round_to_next_5(n)
   (n/5.0).ceil * 5
 end
+
+
+# 55 kata
+#Write a function which returns a new string containing the same character sequences except the first and the last ones but this time separated by spaces.
+
+def array(string)
+  return nil if string.split(",").length < 2
+  string.split(",")[1..-2].join(" ")
+end

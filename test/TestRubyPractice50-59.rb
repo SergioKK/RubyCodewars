@@ -39,4 +39,10 @@ class MyTest < Minitest::Test
       assert_equal(round_to_next_5(9), 10)
       assert_equal(round_to_next_5(16), 20)
     end
+
+    def test_55_kata
+      assert_equal(array('1,2,3'), '2')
+      assert_equal(array('1,2,3,4'), '2 3')
+      assert_equal(array('1,2,3,4,5'), '2 3 4')
+    end
 end
