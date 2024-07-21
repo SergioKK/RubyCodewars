@@ -109,5 +109,16 @@ def what_day?(n)
   7 => "Saturday"
 }
   days_hash.include?(n) ? days_hash[n] : 'Wrong, please enter a number between 1 and 7'
+end
 
+
+# 59 kata
+=begin 
+Your job is to write a function which increments a string, to create a new string.
+If the string already ends with a number, the number should be incremented by 1.
+If the string does not end with a number. the number 1 should be appended to the new string.
+=end
+
+def increment_string(input)
+  input.sub(/\d*$/) { |n| n.empty? ? 1 : n.succ }
 end

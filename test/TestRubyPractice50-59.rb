@@ -65,4 +65,13 @@ class MyTest < Minitest::Test
       assert_equal(what_day?(8), 'Wrong, please enter a number between 1 and 7')
       assert_equal(what_day?(20), 'Wrong, please enter a number between 1 and 7')
     end
+
+    def test_59_kata
+      assert_equal(increment_string("foo"), "foo1")
+      assert_equal(increment_string("foobar001"), "foobar002")
+      assert_equal(increment_string("foobar1"), "foobar2")
+      assert_equal(increment_string("foobar00"), "foobar01")
+      assert_equal(increment_string("foobar99"), "foobar100")
+      assert_equal(increment_string(""), "1")
+    end
 end
