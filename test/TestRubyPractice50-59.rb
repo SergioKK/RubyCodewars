@@ -57,4 +57,12 @@ class MyTest < Minitest::Test
       assert_equal(str_count('Hello', 'l'), 2)
       assert_equal(str_count('', 'z'), 0)
     end
+
+    def test_58_kata
+      assert_equal(what_day?(1), 'Sunday')
+      assert_equal(what_day?(2), 'Monday')
+      assert_equal(what_day?(3), 'Tuesday')
+      assert_equal(what_day?(8), 'Wrong, please enter a number between 1 and 7')
+      assert_equal(what_day?(20), 'Wrong, please enter a number between 1 and 7')
+    end
 end

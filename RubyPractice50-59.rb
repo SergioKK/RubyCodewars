@@ -92,3 +92,22 @@ end
 def str_count(word, letter)
   word.count(letter)
 end
+
+
+# 58 kata
+# Complete the function which returns the weekday according to the input number:
+ 
+
+def what_day?(n)
+  days_hash = {
+  1 => "Sunday",
+  2 => "Monday",
+  3 => "Tuesday",
+  4 => "Wednesday",
+  5 => "Thursday",
+  6 => "Friday",
+  7 => "Saturday"
+}
+  days_hash.include?(n) ? days_hash[n] : 'Wrong, please enter a number between 1 and 7'
+
+end
