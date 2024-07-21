@@ -51,4 +51,10 @@ class MyTest < Minitest::Test
       assert_equal(encrypt_this("A wise old owl lived in an oak"), "65 119esi 111dl 111lw 108dvei 105n 97n 111ka")
       assert_equal(encrypt_this("Thank you Piotr for all your help"), "84kanh 121uo 80roti 102ro 97ll 121ruo 104ple")
     end
+
+    def test_57_kata
+      assert_equal(str_count('Hello', 'o'), 1)
+      assert_equal(str_count('Hello', 'l'), 2)
+      assert_equal(str_count('', 'z'), 0)
+    end
 end
