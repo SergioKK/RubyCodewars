@@ -10,3 +10,23 @@ def comp(array1, array2)
   return false if array1.nil? || array2.nil?
   array1.map {|num| num ** 2}.sort == array2.sort 
 end
+
+
+# 61 kata
+=begin
+Your task is correct the errors in the digitised text. You only have to handle the following mistakes:
+
+S is misinterpreted as 5
+O is misinterpreted as 0
+I is misinterpreted as 1
+=end
+
+def correct(string)
+  replacement = {"5" => "S", "0" => "O", "1" => "I"}
+  string.gsub(/[501]/, replacement)
+end
+
+# another way
+def correct(string)
+  string.tr('501','SOI')
+end
