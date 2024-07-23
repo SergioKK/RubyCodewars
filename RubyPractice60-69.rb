@@ -30,3 +30,16 @@ end
 def correct(string)
   string.tr('501','SOI')
 end
+
+
+# 62 kata
+# Given a 2D ( nested ) list ( array, vector, .. ) of size m * n, your task is to find the sum of the minimum values in each row.
+ 
+def sum_of_minimums(numbers)
+  numbers.inject(0) { |sum, number| sum += number.min }
+end
+
+# best way
+def sum_of_minimums(numbers)
+  numbers.sum(&:min)
+end
