@@ -24,4 +24,10 @@ class MyTest < Minitest::Test
       assert_equal(sum_of_minimums([[7, 9, 8, 6, 2], [6, 3, 5, 4, 3], [5, 8, 7, 4, 5] ]), 9)
       assert_equal(sum_of_minimums([[11, 12, 14, 54], [67, 89, 90, 56], [7, 9, 4, 3], [9, 8, 6, 7] ]), 76)
     end
+
+    def test_62_kata
+      assert_equal(two_sum([1, 2, 3], 4).sort, [0, 2])
+      assert_equal(two_sum([1234, 5678, 9012], 14690).sort, [1, 2])
+      assert_equal(two_sum([2, 2, 3], 4).sort, [0, 1])
+    end
 end

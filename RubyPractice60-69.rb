@@ -43,3 +43,19 @@ end
 def sum_of_minimums(numbers)
   numbers.sum(&:min)
 end
+
+
+# 63 kata
+=begin
+Write a function that takes an array of numbers (integers for the tests) and a target number. 
+It should find two different items in the array that, when added together, give the target value. 
+The indices of these items should then be returned in a tuple / list (depending on your language) like so: (index1, index2).
+=end
+
+def two_sum(numbers, target)
+  numbers.each_with_index do |n1, i1|
+    numbers.each_with_index do |n2, i2|
+      return [i1, i2] if (n1 + n2) == target && i1 != i2
+    end
+  end
+end
