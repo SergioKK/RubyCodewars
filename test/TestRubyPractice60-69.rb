@@ -30,4 +30,13 @@ class MyTest < Minitest::Test
       assert_equal(two_sum([1234, 5678, 9012], 14690).sort, [1, 2])
       assert_equal(two_sum([2, 2, 3], 4).sort, [0, 1])
     end
+
+    def test_63_kata
+      s="aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz"
+      assert_equal(printer_error(s), "3/56")
+      s = "kkkwwwaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz"
+      assert_equal(printer_error(s), "6/60")
+      s = "kkkwwwaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyzuuuuu"
+      assert_equal(printer_error(s), "11/65")
+    end
 end
