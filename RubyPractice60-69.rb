@@ -70,3 +70,10 @@ def printer_error(s)
 	"#{s.count('n-z')}/#{s.length}"
 end
 
+
+# 65 kata
+# There's a "3 for 2" (or "2+1" if you like) offer on mangoes. For a given quantity and price (per mango), calculate the total cost of the mangoes.
+
+def mango(quantity, price)
+  (quantity - quantity/3) * price
+end

@@ -39,4 +39,12 @@ class MyTest < Minitest::Test
       s = "kkkwwwaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyzuuuuu"
       assert_equal(printer_error(s), "11/65")
     end
+
+    def test_64_kata
+      assert_equal(mango(3, 3), 6)
+      assert_equal(mango(9, 5), 30)
+      assert_equal(mango(0, 5), 0)
+      assert_equal(mango(9, 0), 0)
+      assert_equal(mango(7541, 424), 2131872)
+    end
 end
