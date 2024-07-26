@@ -64,4 +64,13 @@ class MyTest < Minitest::Test
       assert_equal(validate_usr('____'), true)
       assert_equal(validate_usr("gajcDrR7Vqhkolz4o"), false)
     end
+
+    def test_67_kata
+      assert_equal(words_to_marks("attitude"), 100)
+      assert_equal(words_to_marks("friends"), 75)
+      assert_equal(words_to_marks("family"), 66)
+      assert_equal(words_to_marks("selfness"), 99)
+      assert_equal(words_to_marks("knowledge"), 96)
+      assert_equal(words_to_marks("incomprehensibility"), 225)
+    end
 end

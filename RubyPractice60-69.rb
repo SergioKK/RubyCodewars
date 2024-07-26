@@ -102,3 +102,12 @@ end
 def validate_usr(username)
   username.match?(/^[a-z0-9_]{4,16}$/)
 end
+
+
+# 68 kata
+#Your task is to write a function which calculates the value of a word based off the sum of the alphabet positions of its characters.
+#The input will always be made of only lowercase letters and will never be empty.
+
+def words_to_marks(string)
+  string.chars.inject(0) { |sum, char| sum + (char.bytes[0] - 96) }
+end
