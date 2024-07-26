@@ -47,4 +47,11 @@ class MyTest < Minitest::Test
       assert_equal(mango(9, 0), 0)
       assert_equal(mango(7541, 424), 2131872)
     end
+
+    def test_65_kata
+      assert_equal(title_case(''), '')
+      assert_equal(title_case('a clash of KINGS', 'a an the of'), 'A Clash of Kings')
+      assert_equal(title_case('THE WIND IN THE WILLOWS', 'The In'), 'The Wind in the Willows')
+      assert_equal(title_case('the quick brown fox'), 'The Quick Brown Fox')
+    end
 end
