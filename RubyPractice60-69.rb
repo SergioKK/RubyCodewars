@@ -93,3 +93,12 @@ def title_case(title, minor_words='')
   minor_words = minor_words.downcase.split(' ')
   title.capitalize.split(' ').map { |word| minor_words.include?(word.downcase) ? word : word.capitalize }.join(' ')
 end
+
+
+# 67 kata
+#Write a simple regex to validate a username. Allowed characters are: lowercase letters, numbers, underscore
+#Length should be between 4 and 16 characters (both included).
+
+def validate_usr(username)
+  username.match?(/^[a-z0-9_]{4,16}$/)
+end

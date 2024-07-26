@@ -25,13 +25,13 @@ class MyTest < Minitest::Test
       assert_equal(sum_of_minimums([[11, 12, 14, 54], [67, 89, 90, 56], [7, 9, 4, 3], [9, 8, 6, 7] ]), 76)
     end
 
-    def test_62_kata
+    def test_63_kata
       assert_equal(two_sum([1, 2, 3], 4).sort, [0, 2])
       assert_equal(two_sum([1234, 5678, 9012], 14690).sort, [1, 2])
       assert_equal(two_sum([2, 2, 3], 4).sort, [0, 1])
     end
 
-    def test_63_kata
+    def test_64_kata
       s="aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz"
       assert_equal(printer_error(s), "3/56")
       s = "kkkwwwaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz"
@@ -40,7 +40,7 @@ class MyTest < Minitest::Test
       assert_equal(printer_error(s), "11/65")
     end
 
-    def test_64_kata
+    def test_65_kata
       assert_equal(mango(3, 3), 6)
       assert_equal(mango(9, 5), 30)
       assert_equal(mango(0, 5), 0)
@@ -48,10 +48,20 @@ class MyTest < Minitest::Test
       assert_equal(mango(7541, 424), 2131872)
     end
 
-    def test_65_kata
+    def test_66_kata
       assert_equal(title_case(''), '')
       assert_equal(title_case('a clash of KINGS', 'a an the of'), 'A Clash of Kings')
       assert_equal(title_case('THE WIND IN THE WILLOWS', 'The In'), 'The Wind in the Willows')
       assert_equal(title_case('the quick brown fox'), 'The Quick Brown Fox')
+    end
+
+    def test_67_kata
+      assert_equal(validate_usr('asddsa'), true)
+      assert_equal(validate_usr('a'), false)
+      assert_equal(validate_usr('Hass'), false)
+      assert_equal(validate_usr('Hasd_12assssssasasasasasaasasasasas'), false)
+      assert_equal(validate_usr(''), false)
+      assert_equal(validate_usr('____'), true)
+      assert_equal(validate_usr("gajcDrR7Vqhkolz4o"), false)
     end
 end
