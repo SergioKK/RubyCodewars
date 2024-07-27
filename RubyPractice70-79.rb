@@ -20,3 +20,11 @@ if the string contains equal number of uppercase and lowercase letters, convert 
 def solve(s)
   s.count('A-Z') > s.count('a-z') ? s.upcase : s.downcase
 end
+
+
+# 72 kata
+#Return a new array consisting of elements which are multiple of their own index in input array (length > 1).
+
+def multiple_of_index arr
+  arr.select.with_index { |num, index| num if index > 0 and (num % index) == 0 }
+end
