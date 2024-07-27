@@ -10,4 +10,11 @@ class MyTest < Minitest::Test
       assert_equal(even_numbers([6, -25, 3, 7, 5, 5, 7, -3, 23], 1), [6])
     end
 
+    def test_70_kata
+      assert_equal(solve("code"),"code")
+      assert_equal(solve("CODe"),"CODE")
+      assert_equal(solve("COde"),"code")
+      assert_equal(solve("Code"),"code")
+    end
+
 end
