@@ -111,3 +111,15 @@ end
 def words_to_marks(string)
   string.chars.inject(0) { |sum, char| sum + (char.bytes[0] - 96) }
 end
+
+
+# 69 kata
+=begin
+Create a function that converts US dollars (USD) to Chinese Yuan (CNY) . 
+The input is the amount of USD as an integer, and the output should be a string that states the amount of Yuan followed by 'Chinese Yuan'
+The conversion rate you should use is 6.75 CNY for every 1 USD. 
+=end
+
+def usdcny(usd)
+  '%.2f Chinese Yuan' % (usd * 6.75)
+end

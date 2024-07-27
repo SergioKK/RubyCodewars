@@ -73,4 +73,9 @@ class MyTest < Minitest::Test
       assert_equal(words_to_marks("knowledge"), 96)
       assert_equal(words_to_marks("incomprehensibility"), 225)
     end
+
+    def test_67_kata
+      assert_equal(usdcny(15), '101.25 Chinese Yuan')
+      assert_equal(usdcny(465), '3138.75 Chinese Yuan')
+    end
 end
