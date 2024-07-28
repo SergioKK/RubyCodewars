@@ -44,4 +44,11 @@ class MyTest < Minitest::Test
       assert_equal(same_case("\n", "Z"), -1)
     end
 
+    def test_75_kata
+      assert_equal(revrot("1234", 0), "")
+      assert_equal(revrot("", 0), "")
+      assert_equal(revrot("1234", 5), "")
+      assert_equal(revrot("733049910872815764", 5), "330479108928157")
+    end
+
 end

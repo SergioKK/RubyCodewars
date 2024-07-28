@@ -53,3 +53,24 @@ def same_case(a, b)
   else 0
   end
 end
+
+
+# 75 kata
+=begin
+The input is a string str of digits. Cut the string into chunks 
+(a chunk here is a substring of the initial string) of size sz (ignore the last chunk if its size is less than sz).
+
+If the sum of a chunk's digits is divisible by 2, reverse that chunk; 
+otherwise rotate it to the left by one position. Put together these modified chunks and return the result as a string.
+=end
+
+def revrot(str, sz)
+  return '' if sz <= 0 || str.empty? || sz > str.size
+  str.scan(/\d{#{sz}}/).map do |num|
+    if num.chars.map { |digit| digit.to_i**3 }.reduce(:+).even?
+      num.reverse
+    else
+      num.chars.rotate.join
+    end
+  end.join
+end
