@@ -36,3 +36,20 @@ end
 def adjacent_element_product(array)
   array.each_cons(2).map { |a,b| a * b }.max
 end
+
+
+# 74 kata
+# Write a function that will check if two given characters are the same case.
+
+#If either of the characters is not a letter, return -1
+#If both characters are the same case, return 1
+#If both characters are letters, but not the same case, return 0
+
+def same_case(a, b)
+  case
+  when (a + b).scan(/[A-Z]/).length    == 2 then 1
+  when (a + b).scan(/[a-z]/).length    == 2 then 1
+  when (a + b).scan(/[A-Za-z]/).length  < 2 then -1
+  else 0
+  end
+end

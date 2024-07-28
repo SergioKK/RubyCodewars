@@ -34,4 +34,14 @@ class MyTest < Minitest::Test
       assert_equal(adjacent_element_product([4, 12, 3, 1, 5]), 48)
     end
 
+    def test_74_kata
+      assert_equal(same_case("C", "B"), 1)
+      assert_equal(same_case("b", "a"), 1)
+      assert_equal(same_case("d", "d"), 1)
+      assert_equal(same_case("A", "s"), 0)
+      assert_equal(same_case("c", "B"), 0)
+      assert_equal(same_case("b", "Z"), 0)
+      assert_equal(same_case("\n", "Z"), -1)
+    end
+
 end
