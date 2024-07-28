@@ -28,3 +28,11 @@ end
 def multiple_of_index arr
   arr.select.with_index { |num, index| num if index > 0 and (num % index) == 0 }
 end
+
+
+# 73 kata
+# Given an array of integers , Find the maximum product obtained from multiplying 2 adjacent numbers in the array.
+
+def adjacent_element_product(array)
+  array.each_cons(2).map { |a,b| a * b }.max
+end

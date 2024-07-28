@@ -26,4 +26,12 @@ class MyTest < Minitest::Test
       assert_equal(multiple_of_index([-1,-49,-1,67,8,-60,39,35]), [-49, 8, -60, 35])
     end
 
+    def test_73_kata
+      assert_equal(adjacent_element_product([5, 8]), 40)
+      assert_equal(adjacent_element_product([5, 1, 1, 8]), 8)
+      assert_equal(adjacent_element_product([1, 2, 3]), 6)
+      assert_equal(adjacent_element_product([1, 5, 10, 9]), 90)
+      assert_equal(adjacent_element_product([4, 12, 3, 1, 5]), 48)
+    end
+
 end
