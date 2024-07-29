@@ -103,3 +103,11 @@ end
 def sum_cubes(n)
   (1..n).sum { |num| num**3 }
 end
+
+
+# 78 kata
+# Given a sequence of numbers, find the largest pair sum in the sequence.
+
+def largest_pair_sum(numbers)
+  numbers.combination(2).map { |pair| pair.sum }.max
+end

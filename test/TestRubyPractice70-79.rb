@@ -69,4 +69,11 @@ class MyTest < Minitest::Test
         assert_equal(sum_cubes(123), 58155876)
     end
 
+    def test_78_kata
+      assert_equal(largest_pair_sum([10,14,2,23,19]), 42)
+      assert_equal(largest_pair_sum([-100,-29,-24,-19,19]), 0)
+      assert_equal(largest_pair_sum([1,2,3,4,6,-1,2]), 10)
+      assert_equal(largest_pair_sum([-10, -8, -16, -18, -19]), -18)
+    end
+
 end
