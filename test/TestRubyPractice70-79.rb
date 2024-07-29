@@ -60,4 +60,13 @@ class MyTest < Minitest::Test
       assert_equal(queue_time([2,2,3,3,4,4], 2), 9, "wrong answer for a case with two tills")
     end
 
+    def test_77_kata
+        assert_equal(sum_cubes(1), 1)
+        assert_equal(sum_cubes(2), 9)
+        assert_equal(sum_cubes(3), 36)
+        assert_equal(sum_cubes(4), 100)
+        assert_equal(sum_cubes(10), 3025)
+        assert_equal(sum_cubes(123), 58155876)
+    end
+
 end
