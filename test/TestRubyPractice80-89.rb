@@ -18,4 +18,9 @@ class MyTest < Minitest::Test
       assert_equal(sum_mix(['1', '5', '8', 8, 9, 9, 2, '3']), 45)
       assert_equal(sum_mix([8, 0, 0, 8, 5, 7, 2, 3, 7, 8, 6, 7]), 61)
     end
+
+    def test_82_kata
+      assert_equal(switch_it_up(1), "One")
+      assert_equal(switch_it_up(7), "Seven")
+    end
 end
