@@ -28,4 +28,10 @@ class MyTest < Minitest::Test
       assert_equal(greet('riley'), 'Hello Riley!')
       assert_equal(greet('JACK'), 'Hello Jack!')
     end
+
+    def test_84_kata
+      assert_equal(vowel_indices("super"), [2,4], "failed on the word 'super'")
+      assert_equal(vowel_indices("apple"), [1,5],  "failed on the word 'apple'")
+      assert_equal(vowel_indices("123456"), [], "failed on the word '123456'")
+    end
 end

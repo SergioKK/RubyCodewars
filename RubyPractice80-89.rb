@@ -44,3 +44,14 @@ end
 def greet(name)
   "Hello #{name.capitalize}!"
 end
+
+
+# 84 kata
+# We want to know the index of the vowels in a given word, for example, there are two vowels in the word super (the second and fourth letters).
+
+# So given a string "super", we should return a list of [2, 4].
+
+def vowel_indices(word)
+  vowels = ["a", "e", "i", "o", "u", "y"]
+	word.chars.map.with_index { |char, index| index+1 if vowels.include?(char.downcase) }.reject { |char| char.nil? }
+end
