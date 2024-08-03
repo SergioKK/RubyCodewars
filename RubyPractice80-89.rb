@@ -5,3 +5,11 @@ def shortcut(s)
   s.delete("aeiou")
 end
 
+
+# 81 kata
+# Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+# Return your answer as a number.
+
+def sum_mix(x)
+  x.map { |num| num.to_i }.sum
+end
