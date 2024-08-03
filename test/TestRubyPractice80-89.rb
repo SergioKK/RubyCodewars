@@ -23,4 +23,9 @@ class MyTest < Minitest::Test
       assert_equal(switch_it_up(1), "One")
       assert_equal(switch_it_up(7), "Seven")
     end
+
+    def test_83_kata
+      assert_equal(greet('riley'), 'Hello Riley!')
+      assert_equal(greet('JACK'), 'Hello Jack!')
+    end
 end

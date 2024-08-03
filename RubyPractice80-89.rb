@@ -36,3 +36,11 @@ def switch_it_up(number)
   when 9 then "Nine"
   end
 end
+
+
+# 83 kata
+# Write a method that takes one argument as name and then greets that name, capitalized and ends with an exclamation point.
+
+def greet(name)
+  "Hello #{name.capitalize}!"
+end
