@@ -76,4 +76,11 @@ class MyTest < Minitest::Test
       assert_equal(largest_pair_sum([-10, -8, -16, -18, -19]), -18)
     end
 
+    def test_79_kata
+      assert_equal(domain_name("http://google.com"), "google")
+      assert_equal(domain_name("http://google.co.jp"), "google")
+      assert_equal(domain_name("www.xakep.ru"), "xakep")
+      assert_equal(domain_name("https://youtube.com"), "youtube")
+    end
+
 end

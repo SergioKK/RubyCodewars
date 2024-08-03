@@ -111,3 +111,14 @@ end
 def largest_pair_sum(numbers)
   numbers.combination(2).map { |pair| pair.sum }.max
 end
+
+
+# 79 kata
+# Write a function that when given a URL as a string, parses out just the domain name and returns it as a string. 
+
+def domain_name(url)
+  url.gsub!('http://', '')
+  url.gsub!('https://', '')
+  url.gsub!('www.', '')
+  url.split(".")[0]
+end
