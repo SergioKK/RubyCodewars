@@ -42,4 +42,17 @@ class MyTest < Minitest::Test
       assert_equal(multiply(0), 0)
       assert_equal(multiply(-2), -10)
     end
+
+    def test_86_kata
+      assert_equal(sequence_sum(2, 6, 2), 12)
+      assert_equal(sequence_sum(1, 5, 1), 15)
+      assert_equal(sequence_sum(1, 5, 3), 5)
+      assert_equal(sequence_sum(0, 15, 3), 45)
+      assert_equal(sequence_sum(16, 15, 3), 0)
+      assert_equal(sequence_sum(2, 24, 22), 26)
+      assert_equal(sequence_sum(2, 2, 2), 2)
+      assert_equal(sequence_sum(2, 2, 1), 2)
+      assert_equal(sequence_sum(1, 15, 3), 35)
+      assert_equal(sequence_sum(15, 1, 3), 0)
+    end
 end
