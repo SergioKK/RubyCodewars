@@ -85,3 +85,24 @@ end
 def find_longest(arr)
   arr.select { |num| num.to_s.length >= arr.max.to_s.length }[0]
 end
+
+
+# 88 kata
+# Implement the function unique_in_order which takes as argument a sequence and returns 
+# a list of items without any elements with the same value next to each other and preserving the original order of elements.
+
+def unique_in_order(iterable)
+  if iterable.is_a?(String)
+    iterable = iterable.chars
+  end
+
+  result = []
+
+  iterable.each do |char|
+    if char != result[-1]
+      result << char
+    end
+  end
+
+  result
+end

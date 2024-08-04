@@ -63,4 +63,9 @@ class MyTest < Minitest::Test
       assert_equal(find_longest([3, 40000, 100]), 40000)
       assert_equal(find_longest([1, 200, 100000]), 100000)
     end
+
+    def test_88_kata
+      assert_equal(unique_in_order('AAAABBBCCDAABBB'), ['A','B','C','D','A','B'])
+      assert_equal(unique_in_order([1,2,2,3,3]), [1,2,3])
+    end
 end
