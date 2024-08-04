@@ -76,3 +76,12 @@ If end is not the result of an integer number of steps, then don't add it to the
 def sequence_sum(begin_number, end_number, step)
   (begin_number..end_number).step(step).to_a.sum
 end
+
+
+# 87 kata
+# Find the number with the most digits.
+# If two numbers in the argument array have the same number of digits, return the first one in the array.
+
+def find_longest(arr)
+  arr.select { |num| num.to_s.length >= arr.max.to_s.length }[0]
+end

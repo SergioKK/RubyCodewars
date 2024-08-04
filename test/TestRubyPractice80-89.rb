@@ -55,4 +55,12 @@ class MyTest < Minitest::Test
       assert_equal(sequence_sum(1, 15, 3), 35)
       assert_equal(sequence_sum(15, 1, 3), 0)
     end
+
+    def test_87_kata
+      assert_equal(find_longest([1, 10, 100, 102, 101]), 100)
+      assert_equal(find_longest([9000, 8, 800]), 9000)
+      assert_equal(find_longest([8, 900, 500]), 900)
+      assert_equal(find_longest([3, 40000, 100]), 40000)
+      assert_equal(find_longest([1, 200, 100000]), 100000)
+    end
 end
