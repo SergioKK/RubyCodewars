@@ -34,4 +34,12 @@ class MyTest < Minitest::Test
       assert_equal(vowel_indices("apple"), [1,5],  "failed on the word 'apple'")
       assert_equal(vowel_indices("123456"), [], "failed on the word '123456'")
     end
+
+    def test_85_kata
+      assert_equal(multiply(10), 250)
+      assert_equal(multiply(5), 25)
+      assert_equal(multiply(200), 25000)
+      assert_equal(multiply(0), 0)
+      assert_equal(multiply(-2), -10)
+    end
 end

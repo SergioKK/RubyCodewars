@@ -55,3 +55,11 @@ def vowel_indices(word)
   vowels = ["a", "e", "i", "o", "u", "y"]
 	word.chars.map.with_index { |char, index| index+1 if vowels.include?(char.downcase) }.reject { |char| char.nil? }
 end
+
+
+# 85 kata
+# Jack really likes his number five: the trick here is that you have to multiply each number by 5 raised to the number of digits of each numbers.
+
+def multiply(n)
+  n*(5**n.abs.to_s.length)
+end
