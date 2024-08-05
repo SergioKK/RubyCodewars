@@ -122,15 +122,13 @@ Calculate the distance between the first and the last pillar in centimeters (wit
 =end
 
 def pillars(num_of_pillars, distance, width)
-  # result = 0
+  result = 0
 
-  # if num_of_pillars > 2
-  #   result += (num_of_pillars-1)*distance*100 + (num_of_pillars-2)*width
-  # elsif num_of_pillars == 2
-  #   result = distance*100
-  # end
+  if num_of_pillars > 2
+    result += (num_of_pillars-1)*distance*100 + (num_of_pillars-2)*width
+  elsif num_of_pillars == 2
+    result = distance*100
+  end
 
-  # result
-
-  num_of_pillars >= 2 ? num_of_pillars == 2 ? result = distance*100 : 0 : (num_of_pillars-1)*distance*100 + (num_of_pillars-2)*width
+  result
 end
