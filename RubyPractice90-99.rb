@@ -13,7 +13,7 @@ def likes(names)
   elsif names.length == 3
     "#{first}, #{second} and #{third} like this"
   else
-    "#{first}, #{second} and #{names.length - 2} others like this"
+    "#{first}, #{second} and #{other.length + 1} others like this"
   end
 end
 
