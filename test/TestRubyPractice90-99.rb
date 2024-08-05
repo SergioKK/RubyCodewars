@@ -12,4 +12,13 @@ class MyTest < Minitest::Test
     assert_equal(likes(['Alex', 'Jacob', 'Mark', 'Max']), 'Alex, Jacob and 2 others like this')
   end
 
+  def test_91_kata
+    assert_equal("c".is_upcase?, false)
+    assert_equal("C".is_upcase?, true)
+    assert_equal("hello I AM DONALD".is_upcase?, false)
+    assert_equal("HELLO I AM DONALD".is_upcase?, true)
+    assert_equal("ACSKLDFJSgSKLDFJSKLDFJ".is_upcase?, false)
+    assert_equal("ACSKLDFJSGSKLDFJSKLDFJ".is_upcase?, true)
+  end
+
 end

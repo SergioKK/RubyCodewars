@@ -16,3 +16,13 @@ def likes(names)
     "#{first}, #{second} and #{names.length - 2} others like this"
   end
 end
+
+
+# 91 kata
+# Create a method to see whether the string is ALL CAPS.
+
+class String
+  def is_upcase?
+    self == self.upcase
+  end
+end
