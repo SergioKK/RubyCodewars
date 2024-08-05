@@ -68,4 +68,10 @@ class MyTest < Minitest::Test
       assert_equal(unique_in_order('AAAABBBCCDAABBB'), ['A','B','C','D','A','B'])
       assert_equal(unique_in_order([1,2,2,3,3]), [1,2,3])
     end
+
+    def test_89_kata
+      assert_equal(pillars(1, 10, 10) , 0)
+      assert_equal(pillars(2, 20, 25) , 2000)
+      assert_equal(pillars(11, 15, 30) , 15270)
+    end
 end
